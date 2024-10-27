@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Estilos para o menu */
+        .menu {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 30px; /* Diminuiu a largura do ícone do menu */
+            text-align: center;
+        }
+
+        .menu span {
+            font-size: 20px; /* Reduziu o tamanho dos traços */
+            color: #fff;
+        }
+
+        .menu-items {
+            display: none;
+            flex-direction: column;
+            background-color: #000;
+            margin-top: 10px;
+            padding: 10px;
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            border-radius: 5px;
+        }
+
+        .menu-items a {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+            display: block;
+        }
+
+        /* Estilos da capa */
+        .capa {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .capa img {
+            width: 300px; /* Ajuste o tamanho da imagem da capa */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilos de quadros */
+        .quadro {
+            background-color: #006400; /* Verde escuro */
+            color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quadro-curso, .quadro-produto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .quadro-curso img, .quadro-produto img {
+            width: 200px; /* Tamanho da imagem */
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        /* Estilo para o quadro de contato */
+        #contato {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Estilo para ícones */
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menuItems = document.getElementById('menu-items');
+            menuItems.style.display = menuItems.style.display === 'none' ? 'flex' : 'none';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Menu -->
+    <div class="menu" onclick="toggleMenu()">
+        <span>&#9776;</span> <!-- Ícone de três tracinhos -->
+    </div>
+    <div id="menu-items" class="menu-items">
+        <a href="#cursos">Cursos</a>
+        <a href="#contato">Contato</a>
+        <a href="#produtos">Produtos</a>
+    </div>
+
+    <!-- Capa -->
+    <div class="capa">
+        <img src="https://i.postimg.cc/mgPXzgz7/Screenshot-20241024-160403-1.jpg" alt="Imagem da Capa"> <!-- Substitua "sua_imagem.jpg" pela URL da sua imagem -->
+    </div>
+
+    <!-- Mensagem de Boas-vindas -->
+    <div class="quadro">
+        <h1>Bem-vindo ao nosso site</h1>
+        <p>Este é um espaço onde você encontrará diversos cursos, produtos e um atendimento personalizado.</p>
+        <a href="#menu-items" style="color: #fff; text-decoration: none;">Voltar ao Menu</a>
+    </div>
+
+    <!-- Cursos -->
+    <div class="quadro quadro-curso" id="cursos">
+        <img src="curso_imagem.jpg" alt="Imagem do Curso"> <!-- Substitua "curso_imagem.jpg" pela URL da imagem do curso -->
+        <h2>Nome do Curso</h2>
+        <p>Descrição breve do curso que está sendo oferecido.</p>
+        <a href="link_do_curso.html" style="color: #fff; text-decoration: none;">Saiba mais</a>
+        <a href="#menu-items" style="color: #fff; text-decoration: none;">Voltar ao Menu</a>
+    </div>
+
+    <!-- Produtos -->
+    <div class="quadro quadro-produto" id="produtos">
+        <img src="produto_imagem.jpg" alt="Imagem do Produto"> <!-- Substitua "produto_imagem.jpg" pela URL da imagem do produto -->
+        <h2>Nome do Produto</h2>
+        <p>Descrição breve do produto oferecido.</p>
+        <a href="link_do_produto.html" style="color: #fff; text-decoration: none;">Saiba mais</a>
+        <a href="#menu-items" style="color: #fff; text-decoration: none;">Voltar ao Menu</a>
+    </div>
+
+    <!-- Novidades -->
+    <div class="quadro" id="novidades">
+        <h2>Novidades</h2>
+        <p>Fique atento! Em breve teremos novos cursos, produtos e muito mais para você.</p>
+        <a href="#menu-items" style="color: #fff; text-decoration: none;">Voltar ao Menu</a>
+    </div>
+
+    <!-- Contato -->
+    <div class="quadro" id="contato">
+        <h2>Contato</h2>
+        <p>Email: exemplo@seusite.com</p>
+        <p>Telefone: <a href="https://wa.me/seunumerodetelefone" target="_blank" style="color: #000; text-decoration: none;">(xx) xxxxx-xxxx</a></p>
+        <a href="https://chat.whatsapp.com/seulinkdogrupo" target="_blank">
+            <img src="whatsapp_icon.png" alt="Grupo no WhatsApp" class="icon">
+        </a>
+        <a href="#menu-items" style="color: #000; text-decoration: none;">Voltar ao Menu</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
